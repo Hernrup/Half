@@ -1,0 +1,33 @@
+ <template name="overview">
+    <div class="">
+      <div class="container" style="padding:0 10px;">
+
+        {{#if game}}
+            <table class="table" id="overviewExplorer">
+                <tr>
+                    <td></td>
+                    {{#each game.players}}
+                        <th>{{getPlayerName this}}</th>
+                    {{/each}}
+                </tr>
+
+                {{#each round.events}}
+                <tr class="{{iif val=id tst=activeTask.round.id true="success" false=""}}">
+                    <td class="legend">
+                        {{name}}
+                    </td>
+                    {{#each game.players}}
+                        <td class="{{iif val=this tst=activeTask.player._id true="success" false=""}}">
+                            {{{getPoints game._id ../id this}}}
+                        </td>
+                    {{/each}}
+                </tr>
+                {{/each}}
+        
+            </table>
+          {{else}}
+            <p>No game selected</p>
+          {{/if}}
+      </div>
+    </div>
+    </template>

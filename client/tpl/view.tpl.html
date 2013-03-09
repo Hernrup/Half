@@ -1,0 +1,14 @@
+﻿<template name="view">
+
+    {{#compare val=activeMode tst=modes.INPUT.value}}
+        {{> input}}
+    {{/compare}}
+
+    {{#compare val=activeMode tst=modes.OVERVIEW.value}}
+        {{> overview}}
+    {{/compare}}
+
+    {{#compare val=activeMode tst=modes.STATISTICS.value}}
+        {{> statistics}}
+    {{/compare}}
+</template>

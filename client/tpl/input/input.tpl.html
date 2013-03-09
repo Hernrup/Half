@@ -1,0 +1,32 @@
+ <template name="input">
+    <div id="input" style="overflow:hidden;">
+      <div class="">
+       <div class="" style="clear:both; padding-left: 10px; height:120px;">
+             <div id="inputSpec" class="pull-left" >
+                 <p id="">{{activeTask.player.name}}</p>
+                 <p id="baseValue">{{activeTask.round.name}}</p>
+                 
+            </div>
+             <span id="aggValue">{{{formatPoints activeTask.points}}}</span>
+   
+            <div style="width:80px;" class="pull-right">
+                <a id="inputButtonAdd" href="#" class="btn btn-large btn-success">+</a>
+                <a id="inputButtonSubtract" href="#" class="btn btn-large">-</a>
+            </div>
+            <div style="width:80px;" class="pull-right">
+                <a id="inputButtonHalf" href="#" class="btn btn-large btn-danger"><i class="icon-remove"></i></a>
+            </div>
+ 
+      </div>
+
+      </div>
+
+        <div class="footer" style="text-align:center; margin-top:0px; padding: 10px 10px; margin-top:10px;">
+            <a id="prevTask" class="btn pull-left">Prev</a>
+            <a id="serverTask" class="btn">Server preference</a>
+            <a id="nextTask" class="btn pull-right">Next</a>
+      </div>
+        
+    </div>
+     
+    </template>

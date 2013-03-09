@@ -1,0 +1,40 @@
+﻿<template name="controls">
+  <div class="container">
+
+      <div class="btn-group pull-left">
+      <a id="modeToggle" class="btn ">Mode</a>
+      <a class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" id="modeSelector">
+        {{#each modes}}
+            <li><a class="" rel="{{value}}" href="#"><i class="{{icon}}"></i>{{name}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+
+      <div class="btn-group pull-right">
+      <a class="btn ">Action</a>
+      <a class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" id="Ul2">
+          <li><a class="" rel="" href="#"><i class="icon-rss"></i>RSS</a></li>
+          <li><a class="" rel="" href="#"><i class="icon-reload"></i>Sync</a></li>
+      </ul>
+    </div>
+
+      <div class="btn-group pull-left">
+      <a class="btn ">{{#if activeGame}}{{getGameName activeGame}}{{else}}Select Game{{/if}}</a>
+      <a class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" id="gameSelector">
+        {{#each games}}
+            <li><a class="" rel="{{_id}}" href="#"><i class="icon-repeat"></i>{{name}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+    
+  </div>
+</template>
